@@ -18,6 +18,8 @@ namespace GameRes {
 	const std::string sMainCsb = "main.csb";
 	const std::string sGameCsb = "game.csb";
 	const std::string sPlayGame = "play_game.csb";
+	const std::string sGameOver = "game_over.csb";
+	const std::string sSetting = "setting.csb";
 
 	const int iStarPathNums = 5;
 	const int iStarWidth = 64;
