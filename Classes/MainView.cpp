@@ -36,8 +36,14 @@ bool MainView::init() {
 
 void MainView::initBtnClick() {
 	m_btnPlay->addClickEventListener([=](Ref* sender){
-		auto _control = dynamic_cast<GameController*>(SceneController::getInstance()->createController("game"));
-		_control->createView("game");
+		if (!UserDefault::getInstance()->getBoolForKey("bGameOver", true)) {
+			auto _control = dynamic_cast<GameController*>(SceneController::getInstance()->createController("main"));
+			_control->createView("playGamePopView");
+		}
+		else {
+			auto _control = dynamic_cast<GameController*>(SceneController::getInstance()->createController("game"));
+			_control->createView("game");
+		}
 	});
 	m_btnShop->addClickEventListener([=](Ref* sender){
 		CCLOG("yyuuuuuuu 0");

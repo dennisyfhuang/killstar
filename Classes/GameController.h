@@ -23,8 +23,12 @@ public:
 
 	void findRelativeStar(cocos2d::EventCustom* _custom);
 	void initMap();
+	void saveMap();
+
 	void adjustMapC(); // 纵向调整星星
+	void preadjustMapC();
 	void adjustMapR(); // 横向调整星星
+	void preadjustMapR();
 	void ready();
 	void start();
 	// 判断（_r,_c）的星星可否消除
@@ -44,7 +48,8 @@ public:
 	// 将要删除的星星；
 	std::vector<int> m_willRemoved;
 	// 将要移动的星星
-	std::vector<std::pair<int, int>> m_willMoved;
+	std::vector<std::pair<int, int>> m_willMovedC;
+	std::vector<std::pair<int, int>> m_willMovedR;
 	// 标记空的列
 	std::array<bool, GameRes::iStarColumnNums> m_emptyColumn;
 	// 标记一列中的星星可否继续消除

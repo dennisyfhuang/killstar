@@ -54,14 +54,16 @@ void GameController::createView(std::string _viewname) {
 }
 
 void GameController::ready() {
-	m_bGameOver = false;
-	m_bGameOverThis = false;
+	m_bGameOver = UserDefault::getInstance()->getBoolForKey("bGameOver", false);
+	m_bGameOverThis = UserDefault::getInstance()->getBoolForKey("bGameOverThis", false);
+	m_iLevel = UserDefault::getInstance()->getIntegerForKey("iLevel", 1);
+	m_iScoreGoal = g_scoreConfig[m_iLevel];
+	m_iScoreCur = UserDefault::getInstance()->getIntegerForKey("iScoreCur", 0);
 	m_willRemoved.clear();
-	m_willMoved.clear();
+	m_willMovedC.clear();
+	m_willMovedR.clear();
 	m_emptyColumn.fill(false);
 	m_canRemoved.fill(false);
-	m_iLevel += 1;
-	m_iScoreGoal = g_scoreConfig[m_iLevel];
 	initMap();
 
 	auto _gameView = dynamic_cast<GameView*>(m_selfLayer->getChildByTag(TAG_GAME_VIEW));
@@ -120,9 +122,31 @@ void GameController::initMap() {
 		}
 	}
 
+	saveMap();
+	UserDefault::getInstance()->setBoolForKey("bGameOver", m_bGameOver);
+	UserDefault::getInstance()->setBoolForKey("bGameOverThis", m_bGameOverThis);
+
 	for (int j = 0; j < GameRes::iStarColumnNums; j++) {
 		calCanRemoved(j);
 	}
+}
+
+void GameController::saveMap() {
+	if (m_bGameOver) {
+		return;
+	}
+	std::string _writeName = FileUtils::getInstance()->getWritablePath();
+	_writeName += "savemap.txt";
+	std::string _map = "";
+	__String* _temp = nullptr;
+	for (int i = 0; i < GameRes::iStarRowNums; i++) {
+		for (int j = 0; j < GameRes::iStarColumnNums; j++) {
+			_temp = __String::createWithFormat("%d", m_map[i][j]) + i*j - i - j;
+			_map += _temp->getCString();
+			_map += ";";
+		}
+	}
+	FileUtils::getInstance()->writeStringToFile(_map.c_str(), _writeName);
 }
 
 void GameController::initGlobalEvent() {
@@ -149,14 +173,27 @@ void GameController::findRelativeStar(EventCustom* _custom) {
 	m_willRemoved = AI::findRelativeByQueue(m_map, 10, 10, _data[0][0], _data[0][1]);
 
 	if (m_willRemoved.size() > 1) {
+		preadjustMapC(); // 预调整列
+		preadjustMapR(); // 预调整行
+
 		int n = m_willRemoved.size();
 		m_iScoreCur += 5 * n*n;
+
+		saveMap(); // 保存地图
+		judgeGameOver();
+		UserDefault::getInstance()->setBoolForKey("bGameOver", m_bGameOver);
+		UserDefault::getInstance()->setBoolForKey("bGameOverThis", m_bGameOverThis);
+		UserDefault::getInstance()->getBoolForKey("iScoreCur", m_iScoreCur);
+
 		auto _gameView = dynamic_cast<GameView*>(m_selfLayer->getChildByTag(TAG_GAME_VIEW));
 		_gameView->willRemoved(m_willRemoved);
 	}
 }
-
 void GameController::adjustMapC() {
+	auto _gameView = dynamic_cast<GameView*>(m_selfLayer->getChildByTag(TAG_GAME_VIEW));
+	_gameView->adjustMapC(m_willMovedC);
+}
+void GameController::preadjustMapC() {
 	std::array<bool, GameRes::iStarColumnNums> _adjustC; // 需要调整的列
 	_adjustC.fill(false);
 	for each(int v in m_willRemoved) {
@@ -165,7 +202,7 @@ void GameController::adjustMapC() {
 		_adjustC[_c] = true;
 	}
 
-	m_willMoved.clear();
+	m_willMovedC.clear();
 	// 先向下移动
 	for (int i = 0; i < GameRes::iStarColumnNums; i++) {
 		if (!_adjustC[i]) { // 不需要调整
@@ -194,7 +231,7 @@ void GameController::adjustMapC() {
 				m_map[j][i] = -1;
 				int src = j*GameRes::iStarColumnNums + i;
 				int dest = local*GameRes::iStarColumnNums + i;
-				m_willMoved.push_back(std::make_pair(src, dest));
+				m_willMovedC.push_back(std::make_pair(src, dest));
 				local++;
 			}
 		}
@@ -202,13 +239,13 @@ void GameController::adjustMapC() {
 		// 调整过后，再次判断此列是否有星星可以消除
 		calCanRemoved(i);
 	}
-
-	auto _gameView = dynamic_cast<GameView*>(m_selfLayer->getChildByTag(TAG_GAME_VIEW));
-	_gameView->adjustMapC(m_willMoved);
 }
-
 void GameController::adjustMapR() {
-	m_willMoved.clear();
+	auto _gameView = dynamic_cast<GameView*>(m_selfLayer->getChildByTag(TAG_GAME_VIEW));
+	_gameView->adjustMapR(m_willMovedR);
+}
+void GameController::preadjustMapR() {
+	m_willMovedR.clear();
 	int local = -1;
 	if (m_emptyColumn[0]) {
 		local = 0;
@@ -229,7 +266,7 @@ void GameController::adjustMapR() {
 				m_map[_r][_c] = -1;
 				int src = _r*GameRes::iStarColumnNums + _c;
 				int dest = _r*GameRes::iStarColumnNums + local;
-				m_willMoved.push_back(std::make_pair(src, dest));
+				m_willMovedR.push_back(std::make_pair(src, dest));
 			}
 
 			// 调整local、_c列是否有星星可以移除
@@ -245,9 +282,6 @@ void GameController::adjustMapR() {
 			m_canRemoved[local] = false;
 		}
 	}
-
-	auto _gameView = dynamic_cast<GameView*>(m_selfLayer->getChildByTag(TAG_GAME_VIEW));
-	_gameView->adjustMapR(m_willMoved);
 }
 
 bool GameController::judgeGameOverThis() {

@@ -4,6 +4,7 @@
 
 #include "cocos2d.h"
 #include <vector>
+#include "PlayGamePopView.h"
 
 class MainController : public cocos2d::Ref {
 public:
@@ -21,6 +22,7 @@ private:
 	std::vector<std::string> m_eventList;
 	cocos2d::Node* m_selfLayer;
 	cocos2d::Node* m_mainView;
+	PlayGamePopView* m_playGamePopView;
 };
 
 

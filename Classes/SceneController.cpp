@@ -4,6 +4,7 @@
 #include "GameController.h"
 #include "MainView.h"
 #include "GameView.h"
+#include "PlayGamePopView.h"
 #include "DispatcherEnum.h"
 USING_NS_CC;
 
@@ -48,6 +49,10 @@ Node* SceneController::viewIntoScene(std::string _viewname, bool _remove, bool _
 	else if (_viewname == "game") {
 		_view = GameView::create();
 		m_gameLayer->addChild(_view);
+	}
+	else if (_viewname == "playGamePopView") {
+		_view = PlayGamePopView::create();
+		m_mainLayer->addChild(_view);
 	}
 	else {
 		return nullptr;
