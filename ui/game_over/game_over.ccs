@@ -1,0 +1,20 @@
+<Solution>
+  <PropertyGroup Name="game_over" Version="2.3.2.3" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="game_over.csd" Type="Scene" />
+        <Image Name="bg_gift.png" />
+        <Image Name="bg_title4.png" />
+        <Image Name="btn_continue.png" />
+        <Image Name="star_4.png" />
+        <Image Name="quit_button.png" />
+        <Image Name="text_award_106.png" />
+        <Image Name="num_redyellow.png" />
+        <Image Name="text_highscore.png" />
+        <Image Name="text_award_108.png" />
+        <Project Name="play_game.csd" Type="Scene" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
