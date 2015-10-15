@@ -14,6 +14,21 @@
         <Image Name="text_highscore.png" />
         <Image Name="text_award_108.png" />
         <Project Name="play_game.csd" Type="Scene" />
+        <Image Name="bk_image_2.png" />
+        <Image Name="title_image.png" />
+        <Image Name="text_tishi.png" />
+        <TTF Name="fzjzjt.ttf" />
+        <Image Name="common_button.png" />
+        <Image Name="btn_158_60.png" />
+        <Project Name="setting.csd" Type="Scene" />
+        <Image Name="bg_effect1.png" />
+        <Image Name="color_bg.png" />
+        <Image Name="option_sfx.png" />
+        <Image Name="sound_box.png" />
+        <Image Name="daily_mark.png" />
+        <Image Name="bg_223_70.png" />
+        <Image Name="lucky_star.png" />
+        <Image Name="text_chen2.png" />
       </RootFolder>
     </Group>
   </SolutionFolder>
