@@ -29,6 +29,7 @@
         <Image Name="bg_223_70.png" />
         <Image Name="lucky_star.png" />
         <Image Name="text_chen2.png" />
+        <Project Name="level.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>
