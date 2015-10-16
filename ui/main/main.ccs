@@ -1,0 +1,31 @@
+<Solution>
+  <PropertyGroup Name="main" Version="2.3.2.3" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="MainScene.csd" Type="Scene" />
+        <Image Name="HelloWorld.png" />
+        <Image Name="bg_mainscene.png" />
+        <Image Name="bg_hiscore.png" />
+        <Image Name="light_blue.png" />
+        <Image Name="light_green.png" />
+        <Image Name="light_pink.png" />
+        <Image Name="light_red.png" />
+        <Image Name="light_yellow.png" />
+        <Image Name="level_0.png" />
+        <Image Name="level_1.png" />
+        <Image Name="level_2.png" />
+        <Image Name="sliderProgress.png" />
+        <Image Name="sliderTrack.png" />
+        <Image Name="bg_indicator.png" />
+        <Image Name="progress.png" />
+        <Image Name="progress_r.png" />
+        <Image Name="shop.png" />
+        <Image Name="common_button.png" />
+        <Image Name="btn_long.png" />
+        <TTF Name="Marker Felt.ttf" />
+        <TTF Name="arial.ttf" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
