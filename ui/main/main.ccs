@@ -3,7 +3,7 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Project Name="MainScene.csd" Type="Scene" />
+        <Project Name="main.csd" Type="Scene" />
         <Image Name="HelloWorld.png" />
         <Image Name="bg_mainscene.png" />
         <Image Name="bg_hiscore.png" />
@@ -25,6 +25,12 @@
         <Image Name="btn_long.png" />
         <TTF Name="Marker Felt.ttf" />
         <TTF Name="arial.ttf" />
+        <TTF Name="fzjzjt.ttf" />
+        <Image Name="title_popstar.png" />
+        <PlistParticleFile Name="firework_blink.plist" />
+        <Project Name="blink_star.csd" Type="Scene" />
+        <PlistParticleFile Name="paticle_star_red.plist" />
+        <Project Name="Node.csd" Type="Node" />
       </RootFolder>
     </Group>
   </SolutionFolder>

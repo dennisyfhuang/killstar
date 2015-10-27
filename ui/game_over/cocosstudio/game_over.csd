@@ -1,24 +1,11 @@
 <GameProjectFile>
-  <PropertyGroup Type="Scene" Name="MainScene" ID="a2ee0952-26b5-49ae-8bf9-4f1d6279b798" Version="2.3.2.3" />
+  <PropertyGroup Type="Scene" Name="game_over" ID="a2ee0952-26b5-49ae-8bf9-4f1d6279b798" Version="2.3.2.3" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Scene" ctype="GameNodeObjectData">
         <Size X="640.0000" Y="960.0000" />
         <Children>
-          <AbstractNodeData Name="pan_touch" ActionTag="1874509785" Tag="14" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" TouchEnable="True" BackColorAlpha="102" ColorAngle="90.0000" ctype="PanelObjectData">
-            <Size X="640.0000" Y="960.0000" />
-            <AnchorPoint />
-            <Position />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition />
-            <PreSize X="1.0000" Y="1.0000" />
-            <SingleColor A="255" R="150" G="200" B="255" />
-            <FirstColor A="255" R="150" G="200" B="255" />
-            <EndColor A="255" R="255" G="255" B="255" />
-            <ColorVector ScaleY="1.0000" />
-          </AbstractNodeData>
           <AbstractNodeData Name="pan_all" ActionTag="-854998705" Tag="15" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" TopMargin="160.0000" BottomMargin="160.0000" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
             <Size X="640.0000" Y="640.0000" />
             <Children>
@@ -81,7 +68,7 @@
               <AbstractNodeData Name="txt_award" ActionTag="-603897505" Tag="25" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="415.5287" RightMargin="144.0000" TopMargin="122.0000" BottomMargin="493.6203" CharWidth="20" CharHeight="24" LabelText="2500" StartChar="0" ctype="TextAtlasObjectData">
                 <Size X="80.0000" Y="24.0000" />
                 <AnchorPoint ScaleX="0.5613" ScaleY="0.6582" />
-                <Position X="460.9038" Y="509.7969" />
+                <Position X="460.9040" Y="509.7968" />
                 <Scale ScaleX="0.7000" ScaleY="0.9000" />
                 <CColor A="255" R="255" G="0" B="0" />
                 <PrePosition X="0.7194" Y="0.7960" />
@@ -101,7 +88,7 @@
               <AbstractNodeData Name="txt_need" ActionTag="-977255344" Tag="27" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BottomEdge" LeftMargin="308.0223" RightMargin="271.9777" TopMargin="465.6000" BottomMargin="150.4000" CharWidth="20" CharHeight="24" LabelText="6" StartChar="0" ctype="TextAtlasObjectData">
                 <Size X="20.0000" Y="24.0000" />
                 <AnchorPoint ScaleX="0.5491" ScaleY="0.6667" />
-                <Position X="340.9664" Y="166.4000" />
+                <Position X="340.9920" Y="166.4008" />
                 <Scale ScaleX="0.6000" ScaleY="0.6000" />
                 <CColor A="255" R="30" G="144" B="255" />
                 <PrePosition X="0.5328" Y="0.2600" />

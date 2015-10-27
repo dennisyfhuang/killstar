@@ -16,6 +16,7 @@ USING_NS_CC;
 #pragma comment(lib,"libSpine_2013.lib")
 #pragma comment(lib,"librecast_2013.lib")
 #pragma comment(lib,"libbullet_2013.lib")
+#pragma comment(lib,"ws2_32.dll")
 #endif
 
 int APIENTRY _tWinMain(HINSTANCE hInstance,
