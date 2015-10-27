@@ -25,16 +25,5 @@
         <EnableHTML5Advanced Value="False" />
       </Value>
     </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="game_over.csd" />
-          <FilePathData Path="play_game.csd" />
-          <FilePathData Path="setting.csd" />
-          <FilePathData Path="level.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="level.csd" />
-      </Value>
-    </Item>
   </Properties>
 </UserData>
