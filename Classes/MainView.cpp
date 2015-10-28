@@ -1,6 +1,7 @@
 
 #include "SceneController.h"
 #include "GameController.h"
+#include "MainController.h"
 #include "MainView.h"
 #include "GameRes.h"
 
@@ -36,8 +37,8 @@ bool MainView::init() {
 
 void MainView::initBtnClick() {
 	m_btnPlay->addClickEventListener([=](Ref* sender){
-		if (!UserDefault::getInstance()->getBoolForKey("bGameOver", true)) {
-			auto _control = dynamic_cast<GameController*>(SceneController::getInstance()->createController("main"));
+		if (UserDefault::getInstance()->getBoolForKey("bGameOver", false)) {
+			auto _control = dynamic_cast<MainController*>(SceneController::getInstance()->createController("main"));
 			_control->createView("playGamePopView");
 		}
 		else {
