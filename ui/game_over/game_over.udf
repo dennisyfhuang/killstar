@@ -28,10 +28,12 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
-          <FilePathData Path="play_game.csd" />
           <FilePathData Path="game_over.csd" />
+          <FilePathData Path="play_game.csd" />
+          <FilePathData Path="setting.csd" />
+          <FilePathData Path="level.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="game_over.csd" />
+        <ActiveDocument Path="setting.csd" />
       </Value>
     </Item>
   </Properties>
