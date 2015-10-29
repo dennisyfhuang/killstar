@@ -6,69 +6,75 @@
       <ObjectData Name="root" ctype="GameNodeObjectData">
         <Size X="640.0000" Y="960.0000" />
         <Children>
-          <AbstractNodeData Name="lbl_level" ActionTag="1133991386" Tag="4" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="20.0000" RightMargin="530.0000" TopMargin="20.0000" BottomMargin="910.0000" FontSize="30" LabelText="关卡：" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="90.0000" Y="30.0000" />
+          <AbstractNodeData Name="lbl_level" ActionTag="1133991386" Tag="4" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="20.0000" RightMargin="530.0000" TopMargin="17.5000" BottomMargin="907.5000" FontSize="30" LabelText="关卡：" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="90.0000" Y="35.0000" />
             <AnchorPoint ScaleY="0.5000" />
             <Position X="20.0000" Y="925.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.0313" Y="0.9635" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="0.1406" Y="0.0365" />
+            <FontResource Type="Normal" Path="fzjzjt.ttf" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="163" G="176" B="121" />
           </AbstractNodeData>
-          <AbstractNodeData Name="txt_level" ActionTag="-2013566424" Tag="6" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="100.0000" RightMargin="525.0000" TopMargin="20.0000" BottomMargin="830.0000" FontSize="30" LabelText="88" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="30.0000" Y="30.0000" />
+          <AbstractNodeData Name="txt_level" ActionTag="-2013566424" Tag="6" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="100.0000" RightMargin="504.0000" TopMargin="17.5000" BottomMargin="907.5000" FontSize="30" LabelText="88" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="36.0000" Y="35.0000" />
             <AnchorPoint ScaleY="0.5000" />
             <Position X="100.0000" Y="925.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.1563" Y="0.8802" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="0.0562" Y="0.0365" />
+            <FontResource Type="Normal" Path="fzjzjt.ttf" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="lbl_score" ActionTag="-34251471" Tag="7" IconVisible="False" VerticalEdge="TopEdge" LeftMargin="20.0000" RightMargin="470.0000" TopMargin="120.0000" BottomMargin="830.0000" FontSize="30" LabelText="当前得分：" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="150.0000" Y="30.0000" />
+          <AbstractNodeData Name="lbl_score" ActionTag="-34251471" Tag="7" IconVisible="False" VerticalEdge="TopEdge" LeftMargin="20.0000" RightMargin="470.0000" TopMargin="117.5000" BottomMargin="807.5000" FontSize="30" LabelText="当前得分：" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="150.0000" Y="35.0000" />
             <AnchorPoint ScaleY="0.5000" />
             <Position X="20.0000" Y="825.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.0313" Y="0.8802" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="0.2344" Y="0.0365" />
+            <FontResource Type="Normal" Path="fzjzjt.ttf" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="txt_score" ActionTag="691966259" Tag="8" IconVisible="False" VerticalEdge="TopEdge" LeftMargin="160.0000" RightMargin="435.0000" TopMargin="120.0000" BottomMargin="830.0000" FontSize="30" LabelText="000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="45.0000" Y="30.0000" />
+          <AbstractNodeData Name="txt_score" ActionTag="691966259" Tag="8" IconVisible="False" VerticalEdge="TopEdge" LeftMargin="160.0000" RightMargin="426.0000" TopMargin="117.5000" BottomMargin="807.5000" FontSize="30" LabelText="000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="54.0000" Y="35.0000" />
             <AnchorPoint ScaleY="0.5000" />
             <Position X="160.0000" Y="825.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.2500" Y="0.8802" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="0.0844" Y="0.0365" />
+            <FontResource Type="Normal" Path="fzjzjt.ttf" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="lbl_best" ActionTag="1823332496" Tag="9" IconVisible="False" VerticalEdge="TopEdge" LeftMargin="20.0000" RightMargin="410.0000" TopMargin="70.0000" BottomMargin="880.0000" FontSize="30" LabelText="本关最高得分：" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="210.0000" Y="30.0000" />
+          <AbstractNodeData Name="lbl_best" ActionTag="1823332496" Tag="9" IconVisible="False" VerticalEdge="TopEdge" LeftMargin="20.0000" RightMargin="410.0000" TopMargin="67.5000" BottomMargin="857.5000" FontSize="30" LabelText="本关最高得分：" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="210.0000" Y="35.0000" />
             <AnchorPoint ScaleY="0.5000" />
             <Position X="20.0000" Y="875.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.0313" Y="0.9323" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="0.3281" Y="0.0365" />
+            <FontResource Type="Normal" Path="fzjzjt.ttf" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="txt_best" ActionTag="1080277431" Tag="10" IconVisible="False" VerticalEdge="TopEdge" LeftMargin="220.0000" RightMargin="375.0000" TopMargin="70.0000" BottomMargin="880.0000" FontSize="30" LabelText="000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="45.0000" Y="30.0000" />
+          <AbstractNodeData Name="txt_best" ActionTag="1080277431" Tag="10" IconVisible="False" VerticalEdge="TopEdge" LeftMargin="220.0000" RightMargin="366.0000" TopMargin="67.5000" BottomMargin="857.5000" FontSize="30" LabelText="000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="54.0000" Y="35.0000" />
             <AnchorPoint ScaleY="0.5000" />
             <Position X="220.0000" Y="875.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.3438" Y="0.9323" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="0.0844" Y="0.0365" />
+            <FontResource Type="Normal" Path="fzjzjt.ttf" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
@@ -82,14 +88,15 @@
             <PreSize X="0.2859" Y="0.0604" />
             <FileData Type="Normal" Path="shop.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="txt_shop_num" ActionTag="242047476" Tag="12" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="450.0000" RightMargin="60.0000" TopMargin="38.0000" BottomMargin="890.0000" FontSize="30" LabelText="00" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="30.0000" Y="30.0000" />
+          <AbstractNodeData Name="txt_shop_num" ActionTag="242047476" Tag="12" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="544.0000" RightMargin="60.0000" TopMargin="37.5000" BottomMargin="887.5000" FontSize="30" LabelText="00" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="36.0000" Y="35.0000" />
             <AnchorPoint ScaleX="1.0000" ScaleY="0.5000" />
-            <Position X="580.0000" Y="907.0000" />
+            <Position X="580.0000" Y="905.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.8594" Y="0.9375" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PrePosition X="0.9063" Y="0.9427" />
+            <PreSize X="0.0562" Y="0.0365" />
+            <FontResource Type="Normal" Path="fzjzjt.ttf" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
@@ -132,25 +139,27 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="lbl_goal" ActionTag="-855177278" Tag="13" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="170.0000" RightMargin="590.0000" TopMargin="20.0000" BottomMargin="-10.0000" FontSize="30" LabelText="目标得分：" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="150.0000" Y="30.0000" />
+          <AbstractNodeData Name="lbl_goal" ActionTag="-855177278" Tag="13" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="170.0000" RightMargin="320.0000" TopMargin="17.5000" BottomMargin="907.5000" FontSize="30" LabelText="目标得分：" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="150.0000" Y="35.0000" />
             <AnchorPoint ScaleX="1.0000" ScaleY="0.5000" />
             <Position X="320.0000" Y="925.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.0781" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="0.2344" Y="0.0365" />
+            <FontResource Type="Normal" Path="fzjzjt.ttf" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="txt_goal" ActionTag="2144581305" Tag="14" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="310.0000" RightMargin="590.0000" TopMargin="20.0000" BottomMargin="-10.0000" FontSize="30" LabelText="000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="45.0000" Y="30.0000" />
+          <AbstractNodeData Name="txt_goal" ActionTag="2144581305" Tag="14" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="310.0000" RightMargin="276.0000" TopMargin="17.5000" BottomMargin="907.5000" FontSize="30" LabelText="000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="54.0000" Y="35.0000" />
             <AnchorPoint ScaleY="0.5000" />
             <Position X="310.0000" Y="925.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="-0.0781" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="0.0844" Y="0.0365" />
+            <FontResource Type="Normal" Path="fzjzjt.ttf" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>

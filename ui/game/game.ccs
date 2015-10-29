@@ -3,13 +3,14 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Project Name="MainScene.csd" Type="Scene" />
+        <Project Name="game.csd" Type="Scene" />
         <Image Name="HelloWorld.png" />
         <Image Name="bg_hiscore.png" />
         <Image Name="shop.png" />
         <Image Name="hammer.png" />
         <Image Name="item_color.png" />
         <Image Name="item_shuffle.png" />
+        <TTF Name="fzjzjt.ttf" />
       </RootFolder>
     </Group>
   </SolutionFolder>

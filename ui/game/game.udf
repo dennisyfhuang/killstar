@@ -28,9 +28,9 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
-          <FilePathData Path="MainScene.csd" />
+          <FilePathData Path="game.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="MainScene.csd" />
+        <ActiveDocument Path="game.csd" />
       </Value>
     </Item>
   </Properties>
