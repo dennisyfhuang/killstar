@@ -1,5 +1,5 @@
 <GameProjectFile>
-  <PropertyGroup Type="Scene" Name="MainScene" ID="a2ee0952-26b5-49ae-8bf9-4f1d6279b798" Version="2.3.2.3" />
+  <PropertyGroup Type="Scene" Name="game" ID="a2ee0952-26b5-49ae-8bf9-4f1d6279b798" Version="2.3.2.3" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
@@ -139,7 +139,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="lbl_goal" ActionTag="-855177278" Tag="13" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="170.0000" RightMargin="320.0000" TopMargin="17.5000" BottomMargin="907.5000" FontSize="30" LabelText="目标得分：" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="lbl_goal" ActionTag="-855177278" Tag="13" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="170.0000" RightMargin="320.0000" TopMargin="17.5000" BottomMargin="907.5000" FontSize="30" LabelText="目标得分：" HorizontalAlignmentType="HT_Right" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="150.0000" Y="35.0000" />
             <AnchorPoint ScaleX="1.0000" ScaleY="0.5000" />
             <Position X="320.0000" Y="925.0000" />
@@ -151,13 +151,13 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="txt_goal" ActionTag="2144581305" Tag="14" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="310.0000" RightMargin="276.0000" TopMargin="17.5000" BottomMargin="907.5000" FontSize="30" LabelText="000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="txt_goal" ActionTag="2144581305" Tag="14" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="310.0000" RightMargin="276.0000" TopMargin="17.5000" BottomMargin="907.5000" FontSize="30" LabelText="999" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="54.0000" Y="35.0000" />
             <AnchorPoint ScaleY="0.5000" />
             <Position X="310.0000" Y="925.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="-0.0781" />
+            <PrePosition X="0.4844" Y="0.9635" />
             <PreSize X="0.0844" Y="0.0365" />
             <FontResource Type="Normal" Path="fzjzjt.ttf" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />

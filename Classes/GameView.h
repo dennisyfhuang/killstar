@@ -51,7 +51,7 @@ public:
 
 	void willRemoved(std::vector<int>); // 已经把要删除的星星标记，将要删除星星
 	void gotoRemoved(Star* _star, double _delay, int _n); // 删除星星动画
-	void adjustMap(std::vector<std::pair<int, int>>); // 调整星星
+	int adjustMap(std::vector<std::pair<int, int>>); // 调整星星
 	void adjustMapC(std::vector<std::pair<int, int>>); // 纵向调整星星
 	void adjustMapR(std::vector<std::pair<int, int>>); // 横向调整星星
 
@@ -69,6 +69,7 @@ public:
 
 private:
 	cocos2d::Node* m_starLayer;
+	cocos2d::Node* m_aniLayer;
 	cocos2d::Node* m_rootUI;
 	cocos2d::EventDispatcher* m_eventDispatcher;
 	std::vector<std::string> m_eventList;

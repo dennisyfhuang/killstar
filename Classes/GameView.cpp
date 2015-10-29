@@ -5,6 +5,7 @@
 #include "Star.h"
 #include "GlobalHeader.h"
 #include "AniManager.h"
+#include "Factory.h"
 #include <cmath>
 using namespace cocos2d;
 using namespace cocostudio;
@@ -15,6 +16,7 @@ GameView::GameView() {
 	m_eventList.clear();
 	m_starTagList.fill(-1);
 	m_mapCopy = nullptr;
+	m_aniLayer = nullptr;
 	m_eventDispatcher = Director::getInstance()->getEventDispatcher();
 
 	m_iScoreLast = 0;
@@ -33,14 +35,14 @@ bool GameView::init() {
 	bool bRet = false;
 
 	do {
-
-		Label* lblScore = Label::create("0", "Arial", 30);
-		lblScore->setPosition(Vec2(GlobalVar::getInstance()->g_winSize.width / 2, GlobalVar::getInstance()->g_winSize.height - 100));
-		lblScore->setTag(TAG_SCORE);
-		this->addChild(lblScore);
 		m_starLayer = Node::create();
 		m_starLayer->setPositionY(100);
 		this->addChild(m_starLayer);
+		m_aniLayer = Node::create();
+		m_aniLayer->setPositionY(100);
+		this->addChild(m_aniLayer, 100);
+
+
 
 		initGlobalEvent();
 		initUI();
@@ -156,12 +158,17 @@ void GameView::gotoRemoved(Star* _star, double _delay, int _n) {
 			setScoreStep(_step);
 
 			this->scheduleScore();
+			Vec2 _p = _star->getPosition();
+			auto _bomb = Factory::getBombAni(_star->getType());
+			_bomb->setPosition(_p);
+			m_aniLayer->addChild(_bomb);
+
 			_star->removeFromParent();
 	})
 		));
 }
 
-void GameView::adjustMap(std::vector<std::pair<int, int>> _will) {
+int GameView::adjustMap(std::vector<std::pair<int, int>> _will) {
 	int n = 0;
 	int _R = -1;
 	int _delay = 0;
@@ -189,11 +196,12 @@ void GameView::adjustMap(std::vector<std::pair<int, int>> _will) {
 			MoveTo::create(0.03, Vec2((_c + 0.5)*GameRes::iStarWidth, (_r + 0.5)*GameRes::iStarHeight))));
 		//_delay = max(_delay, n*0.05);
 	}
+	return n*0.01 + 0.03;
 }
 void GameView::adjustMapC(std::vector<std::pair<int, int>> _will) {
-	adjustMap(_will);
+	int _delay = adjustMap(_will);
 	this->runAction(Sequence::createWithTwoActions(
-		DelayTime::create(0.03),
+		DelayTime::create(_delay),
 		CallFunc::create([&]{
 		m_eventDispatcher->dispatchCustomEvent(CCMD::ADJUST_MAP_R);
 	})
@@ -202,10 +210,11 @@ void GameView::adjustMapC(std::vector<std::pair<int, int>> _will) {
 }
 
 void GameView::adjustMapR(std::vector<std::pair<int, int>> _will) {
-	adjustMap(_will);
+	int _delay = adjustMap(_will);
 	this->runAction(Sequence::createWithTwoActions(
-		DelayTime::create(0.03),
+		DelayTime::create(_delay),
 		CallFunc::create([&]{
+		m_starLayer
 		m_eventDispatcher->dispatchCustomEvent(CCMD::JUDGE_GAME_OVER);
 	})
 		));
@@ -215,7 +224,6 @@ void GameView::scheduleScore() {
 	if (getIsScheduleScore()) return;
 	setIsScheduleScore(true);
 	this->schedule([=](float _dt) {
-		auto _label = (Label*)this->getChildByTag(TAG_SCORE);
 		int _cur = m_iScoreCur;
 		_cur += getScoreStep();
 		int _last = getScoreLast() - getScoreStep();
@@ -224,8 +232,6 @@ void GameView::scheduleScore() {
 		}
 		setScoreLast(_last);
 		setScoreCur(_cur);
-		__String* _temp = __String::createWithFormat("%d", _cur);
-		_label->setString(_temp->_string);
 		if (_last <= 0) {
 			unscheduleScore();
 		}

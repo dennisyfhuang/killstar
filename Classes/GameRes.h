@@ -6,7 +6,7 @@
 
 namespace GameRes {
 	const std::string sStarPath[5] = {
-		"star/block_blue.png" //红色
+		"star/block_blue.png" //蓝色
 		, "star/block_green.png" // 绿色
 		, "star/block_purple.png" // 橘色
 		, "star/block_red.png" //红色
@@ -20,6 +20,7 @@ namespace GameRes {
 	const std::string sPlayGameCsb = "play_game.csb";
 	const std::string sGameOverCsb = "game_over.csb";
 	const std::string sSettingCsb = "setting.csb";
+	const std::string sParStarBomb = "paticle_star_bomb.plist";
 
 	const int iStarPathNums = 5;
 	const int iStarWidth = 64;

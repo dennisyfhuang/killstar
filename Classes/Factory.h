@@ -13,6 +13,8 @@ public:
 		, std::function<void(cocos2d::Touch*, cocos2d::Event*)>onEnded
 		, std::function<void(cocos2d::Touch*, cocos2d::Event*)>onCancelled);
 
+	static cocos2d::Color3B getC3BByType(int _type);
+	static cocos2d::ParticleSystemQuad* getBombAni(int _type);
 
 private:
 

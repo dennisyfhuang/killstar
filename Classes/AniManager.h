@@ -9,7 +9,7 @@ class AniManager
 public:
 	AniManager();
 	~AniManager();
-
+	static AniManager* getInstance();
 private:
 
 };

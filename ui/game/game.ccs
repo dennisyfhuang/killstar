@@ -11,6 +11,7 @@
         <Image Name="item_color.png" />
         <Image Name="item_shuffle.png" />
         <TTF Name="fzjzjt.ttf" />
+        <PlistParticleFile Name="paticle_star_red.plist" />
       </RootFolder>
     </Group>
   </SolutionFolder>
