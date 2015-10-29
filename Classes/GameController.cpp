@@ -141,7 +141,7 @@ void GameController::saveMap() {
 	__String* _temp = nullptr;
 	for (int i = 0; i < GameRes::iStarRowNums; i++) {
 		for (int j = 0; j < GameRes::iStarColumnNums; j++) {
-			_temp = __String::createWithFormat("%d", m_map[i][j]) + i*j - i - j;
+			_temp = __String::createWithFormat("%d", m_map[i][j] + i*j - i - j);
 			_map += _temp->getCString();
 			_map += ";";
 		}
